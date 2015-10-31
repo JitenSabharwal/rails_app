@@ -1,0 +1,10 @@
+<h1>This is Edit</h1>
+<%=form_for :form ,  url: form_path(@form) ,method: :patch do |f|%>
+	<%=f.label :name%>
+	<%=f.text_field :name%>
+	<%=f.label :age%>
+	<%=f.text_field :age %>
+	<%=f.label :email%>
+	<%=f.text_field :email %>
+	<%=f.submit "Update" %>
+<% end %>

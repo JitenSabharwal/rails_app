@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col-md-3 col-md-offset-3">
+	<h2>Article</h2>
+	</div>
+</div>
+<%= form_tag ({:controller=>'articles',:action=>'create'})%>
+<div class="row">
+	<div class="col-md-3 col-md-offset-3">
+	
+		<div class="row">
+			<%=label_tag :title %>
+		</div>
+		<div class="row">
+			<%=text_field_tag :title,nil,:required=>true,class: "form-control"%>
+			</div>
+		<div class="row">
+			<%=label_tag :body %>
+			</div>
+		<div class="row">
+			<%=text_field_tag :body,nil,:required=>true,class: "form-control"%>
+			</div>
+		<br>
+		<div class="row">
+			<%= submit_tag "Create" ,class: "btn btn-primary"%>
+			</div>
+		
+	</div>
+</div>
+<div class="row col-md-1 col-md-offset-1"><%=link_to "Home" , 'home' ,class: ".btn-link" %> </div>

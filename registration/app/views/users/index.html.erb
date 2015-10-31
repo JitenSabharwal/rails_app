@@ -1,0 +1,35 @@
+<div class="row">
+<div class="col-md-3 col-md-offset-3" style="border-bottom: 2px solid aquamarine;">
+	<h1>Sign in</h1>
+</div>
+</div>
+<br>
+
+<%=form_tag ({controller:'session_users' , action: 'login_attempt'})do%>
+<div class="row">
+<div class="col-md-3 col-md-offset-3" >
+		<div class="row">
+			<%=label_tag :username_or_email %>
+			</div>
+		<div class="row">
+				<%=text_field_tag :username_or_email,nil,:required => true , class: "from-control" %>
+			</div>
+	</div>
+</div>
+<div class="row">
+		<div class="col-md-2 col-md-offset-3" >
+			<div class="row">
+				<%= label_tag :login_password%>
+				</div>
+			<div class="row">
+				<%= password_field_tag :login_password, nil, :required => true , class: "from-control" %>	
+				</div>
+		</div>
+</div>
+<br>
+<div class="row">	
+	<div class="col-md-3 col-md-offset-3" >
+		<%= submit_tag "Login" , class: "tn btn-primary" %>	
+		</div>
+</div>		
+<% end %>

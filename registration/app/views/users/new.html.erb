@@ -1,0 +1,29 @@
+<div class="row">
+<div class="col-md-3 col-md-offset-3" style="border-bottom: 2px solid aquamarine;">
+	<h2> Registration Form </h2>
+</div>
+</div>
+<br>
+<div class="row" >
+	<div class="col-md-3 col-md-offset-3">
+		<%=form_tag ({controller: 'users' , action: 'create'}) %>
+			<div class="row">
+			<%= label_tag :name %>
+			<%=text_field_tag :username, nil ,:required=>true , class: "form-control" %>
+			</div>
+			<div class="row">
+			<%= label_tag :email %>
+			<%= email_field_tag :email,nil,:required=>true, class: "form-control " %>
+			</div>
+			<div class="row">
+			<%= label_tag :password %>
+			<%= password_field_tag :password,nil, :required => true , class: "form-control"%>
+			</div>
+			<div class="row">
+			<br>
+			<div class="col-md-3 col-md-offset-4">
+			<%= submit_tag "Register", class: "btn btn-primary" %>	
+			</div>
+			</div>
+	</div>
+</div>
