@@ -1,0 +1,10 @@
+<%=form_for @test do |f| %>
+	<%=f.label :question %>
+	<%=f.text_field :question %>
+	<%=f.text_field :option1 %>
+	<%=f.text_field :option2 %>
+	<%=f.text_field :option3%>
+	<%=f.text_field :option4 %>
+	<%=f.text_field :correct %>
+	<%=f.submit "Submit"%>
+<%end%>

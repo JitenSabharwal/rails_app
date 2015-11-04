@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
   
-  #get "new_article" => 'articles#new'
-  #post "index" => 'session_users#login_attempt'
-  #get "home"   => 'session_users#home'
-  #get "login"  => 'session_users#login'
-  #get "logout" => 'session_users#logout'
-  #resources :users
-  #//resources :session_users 
-  #resources :articles
+  match 'Take_test/(:id)' ,to:'tests#take_test' ,via:[:get,:post,:patch,:put]   
   
-  resources :forms 
+  match "enter/(:id)" ,to:'tests#enter', via:[:get,:post,:patch,:put]
+  
+  get "new_article" => 'articles#new'
+  
+  post "index" => 'session_users#login_attempt'
+  
+  get  "home"   => 'session_users#home'
+  
+  get  "login"  => 'session_users#login'
+  
+  get  "logout" => 'session_users#logout'
+  post "end_test" =>'tests#end_test'
+  resources :users
+  resources :session_users 
+  #resources :articles
+  resources :tests
+  #resources :forms 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

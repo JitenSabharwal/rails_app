@@ -1,3 +1,4 @@
 <%= @current_user.username%>
 <%=link_to "AddArticle", 'new_article' ,class: "btn btn-primary" %>
+<%=link_to "Take Test", 'Take_test',class: "btn btn-primary" %>
 <%=link_to "Logout", {:controller=>"session_users",action:"logout"},class: "btn btn-primary" %>

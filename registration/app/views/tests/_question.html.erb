@@ -1,0 +1,11 @@
+<%=form_for @result ,url:{controller:"tests",action:"enter",test_id:@test},:remote=>true do |f|%>
+	
+	Question<%=@test.id%> <strong><%=@test.question%>?</strong>
+	<%=f.radio_button :selected,@test.option1%>  <%=@test.option1%>	 
+	<%=f.radio_button :selected,@test.option2%>	 <%=@test.option2%>
+	<%=f.radio_button :selected,@test.option3%>	 <%=@test.option3%>
+	<%=f.radio_button :selected,@test.option4%>	 <%=@test.option4%>
+	<%=f.hidden_field 	:test_id,:value=>@test.id%>
+	<%=f.submit "Next"%>
+
+<%end%>

@@ -12,7 +12,7 @@
 			<%=label_tag :username_or_email %>
 			</div>
 		<div class="row">
-				<%=text_field_tag :username_or_email,nil,:required => true , class: "from-control" %>
+				<%=text_field_tag :username_or_email,nil,:required => true , class: "form-control" %>
 			</div>
 	</div>
 </div>
@@ -22,14 +22,14 @@
 				<%= label_tag :login_password%>
 				</div>
 			<div class="row">
-				<%= password_field_tag :login_password, nil, :required => true , class: "from-control" %>	
+				<%= password_field_tag :login_password, nil, :required => true , class: "form-control" %>	
 				</div>
 		</div>
 </div>
 <br>
 <div class="row">	
 	<div class="col-md-3 col-md-offset-3" >
-		<%= submit_tag "Login" , class: "tn btn-primary" %>	
+		<%= submit_tag "Login" , class: "btn btn-primary" %>	
 		</div>
 </div>		
 <% end %>

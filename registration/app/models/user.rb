@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :article
+	has_many :result
 	attr_accessor :password
 	validates :username,:email , presence: true
 	validates :email , uniqueness: true

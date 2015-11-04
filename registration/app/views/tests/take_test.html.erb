@@ -1,0 +1,15 @@
+<% @tests.each do|t| %>
+
+	<%=link_to "Ques"+t.id.to_s,{:controller=>"tests",:action=>"take_test",:id=>t.id},:method=>:post,:remote=>true%>
+<% end %>
+<br>
+<% if flash[:note] %>
+<%= flash[:note]%>
+<%= flash[:up]%>
+<%end%> 
+<div id="question">
+	
+</div>
+<%=link_to "Start Test",{:controller=>"tests",:action=>"take_test"},:method=>:post,id: "start",:remote=>true,class: "btn btn-primary"  %>
+
+<%=link_to "End Test",{:controller=>"tests",:action=>"end_test"},:method=>:post,class: "btn btn-primary",id: "end"%>

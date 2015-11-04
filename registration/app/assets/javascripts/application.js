@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+	$("#end").hide();
+
+$("#start").click(function(){
+	$("#start").show().fadeOut(1000);
+	$("#end").hide().fadeIn(1000);
+});
+});
